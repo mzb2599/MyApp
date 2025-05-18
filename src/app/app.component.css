@@ -1,0 +1,119 @@
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #3498db;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .todo-container {
+            background-color: white;
+            border-radius: 5px;
+            width: 500px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .title {
+            text-align: center;
+            color: #555;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .input-container {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .todo-input {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 3px 0 0 3px;
+            font-style: italic;
+            color: #999;
+        }
+        
+        .add-button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 0 3px 3px 0;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        
+        .todo-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .todo-item {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+        
+        .checkbox {
+            margin-right: 10px;
+        }
+        
+        .todo-text {
+            flex-grow: 1;
+            color: #555;
+        }
+        
+        .completed {
+            text-decoration: line-through;
+            color: #999;
+        }
+        
+        .actions {
+            display: flex;
+        }
+        
+        .edit, .delete {
+            background: none;
+            border: none;
+            color: #ccc;
+            cursor: pointer;
+            padding: 5px;
+            font-size: 14px;
+        }
+        
+        .stats {
+            display: flex;
+            margin-top: 20px;
+        }
+        
+        .count {
+            flex-grow: 1;
+            background-color: #a7e05b;
+            padding: 10px;
+            border-radius: 3px;
+            color: white;
+            text-align: center;
+        }
+        
+        .clear-completed {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .clear-completed span {
+            margin-right: 5px;
+        }
