@@ -22,12 +22,12 @@
 
       <ul class="todo-list" *ngFor="let task of tasks; index as i">
         <li class="todo-item">
-          <input type="checkbox" class="checkbox" (checked)="toggleTask(i)" />
-          <span class="todo-text" (cancel)="(task.completed === true)">{{
+          <input type="checkbox" class="checkbox" (click)="toggleTask(i)" />
+          <span class="todo-text" [style.text-decoration]="task.completed ? 'line-through' : 'none'">{{
             task.task
           }}</span>
           <div class="actions">
-            <button class="edit">✏️</button>
+            <button class="edit" (click)="editTask($event)">✏️</button>
             <button class="delete" (click)="deleteTask(i)">✕</button>
           </div>
         </li>
@@ -35,9 +35,9 @@
 
       <div class="stats" *ngIf="tasks.length > 0">
         <div class="count">
-          {{ completedTasks }} of {{ tasks.length }} tasks done
+          {{ getCompletedTasks }} of {{ tasks.length }} tasks done
         </div>
-        <button class="clear-completed">
+        <button class="clear-completed" (click)="removeChecked()">
           <span>Remove checked</span>
           <span>✕</span>
         </button>

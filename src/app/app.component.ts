@@ -16,9 +16,9 @@ export class AppComponent {
   title = 'MyApp';
   newTask: string = '';
   tasks: Task[] = [];
-  public completedTasks: Number = this.tasks.filter((task) => task.completed)
-    .length;
-
+  get getCompletedTasks():number {
+    return this.tasks.filter((task) => task.completed).length;
+  };
   addTask() {
     console.log(this.newTask);
 
@@ -31,11 +31,20 @@ export class AppComponent {
     }
   }
 
-  toggleTask(index: number) {
+  toggleTask(index: number) {    
     this.tasks[index].completed = !this.tasks[index].completed;
   }
 
   deleteTask(index: number) {
     this.tasks.splice(index, 1);
+  }
+
+  removeChecked() {
+    this.tasks = this.tasks.filter((task) => !task.completed);
+  }
+
+  editTask(event: Event ){
+    console.log(event);
+    
   }
 }
